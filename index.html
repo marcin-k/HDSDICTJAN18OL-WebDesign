@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!--symbols used on the website-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--stylesheet file-->
+    <link rel="stylesheet" href="myStyle.css">
+    <!--jquery used to import header and footer to avoid copying same text into every sub-page-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!--script used to import the header and a footer-->
+    <!--script loads header.html in the place of header div-->
+    <!--and footer.html in the place of footer div-->
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+<!--page header-->
+<div id="header"></div>
+
+<!--image on the home page-->
+<img src="img/mainPageImg.jpg" id="homePageImage"  alt="Medical Icons">
+
+<!--main section of the page describes what we do-->
+<!--contains two divs that move around based on display size-->
+<div  class="mainContainerHomePage" >
+
+        <div class="responsiveHalfSizeDiv">
+            <h3>What we do</h3>
+            <p>We provide our patients with comprehensive medical care, access to free laboratory tests and on-site ultrasound. We provide competent service and a pleasant atmosphere.</p>
+            <p>All you need to do is to book an appointment using our contact us page.</p>
+            <p>We would love to care for all your medical needs.</p>
+        </div>
+
+
+        <div class="responsiveHalfSizeDiv">
+            <p style="letter-spacing:4px;">Average Patient Satisfaction</p>
+            <div class="progressBars" >
+                <div id="satisfactionBar">90%</div>
+                <!--<div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>-->
+            </div>
+            <p style="letter-spacing:4px;">Maximum wait time for an appointment</p>
+            <div class="progressBars" >
+                <div id="waitTimeBar">48H</div>
+            </div>
+        </div>
+
+</div>
+
+<!-- Footer -->
+<div id="footer"></div>
+</body>
+</html>
+

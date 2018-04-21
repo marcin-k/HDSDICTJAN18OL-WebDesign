@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services</title>
+    <!--symbols used on the website-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--stylesheet file-->
+    <link rel="stylesheet" href="myStyle.css">
+    <!--jquery used to import header and footer to avoid copying same text into every sub-page-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!--script used to import the header and a footer-->
+    <!--script loads header.html in the place of header div-->
+    <!--and footer.html in the place of footer div-->
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+<body>
+<!--page header-->
+<div id="header"></div>
+
+<div class="mainContainerHomePage" id="additionalPadding">
+<h1>Our Services</h1>
+
+<p>
+    <span>We are pleased to offer several types of primary care:
+        Family Medicine, General Internal Medicine and Pediatrics.
+        No matter which type of primary care you choose, we are happy to care for you.
+        This means you become part of a primary care team which provides a new,
+        expanded type of care - coordinating all of your health care needs,
+        from helping you stay healthy by reminding you about preventive checkups
+        and tests.</span>
+</p>
+</div>
+
+    <div class="oneThirdContainers">
+        <img src="img/services1.jpg" class="oneThirdElement"  alt="General Practitioner">
+    </div>
+    <div class="oneThirdContainers">
+        <img src="img/services2.jpg" class="oneThirdElement"  alt="Pediatrician">
+    </div>
+    <div class="oneThirdContainers">
+        <img src="img/services3.jpg" class="oneThirdElement"   alt="Family Doctor">
+    </div>
+
+
+<div id="footer"></div>
+</body>
+</html>

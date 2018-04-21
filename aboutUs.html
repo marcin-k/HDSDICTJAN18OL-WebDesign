@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <!--symbols used on the website-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--stylesheet file-->
+    <link rel="stylesheet" href="myStyle.css">
+    <!--jquery used to import header and footer to avoid copying same text into every sub-page-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!--script used to import the header and a footer-->
+    <!--script loads header.html in the place of header div-->
+    <!--and footer.html in the place of footer div-->
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <!--two dives side by site floating one undeneath the other on smaller devices-->
+    <div class="mainContainerHomePage" id="aboutUsTopSection">
+        <div class="aboutUsHalf">
+            <h3>About Us</h3>
+            <p>We are small group of talented individuals operating in medical
+                services industry. We established our business in April 2018.
+                We provide the highest level of service for reasonable
+                and affordable cost. We are located in Dublin at the campus of National
+                College of Ireland. </p>
+        </div>
+        <!--building image-->
+        <img  class="aboutUsHalf" id="aboutUsImage" src="img/collegeBuilding.jpg" alt="College Buildings" >
+    </div>
+
+
+    <div id="meetTheTeam" >Meet the team</div>
+    <!--Our Team-->
+
+
+        <div class="aboutUsOneThirdDiv">
+            <img src="img/carlos.jpg" alt="Carlos">
+            <h3>Carlos Neia</h3>
+            <p>Dermatologist</p>
+            <p>Specialize in skin diseases, including skin cancers.</p>
+        </div>
+
+        <div class="aboutUsOneThirdDiv">
+            <img src="img/marcin.jpeg" alt="Marcin">
+            <h3>Marcin Krzeminski</h3>
+            <p>Anesthesiologist</p>
+            <p>Specialize in chronic pain syndromes; administers anesthesia and monitors the patient during surgery.</p>
+        </div>
+
+        <div class="aboutUsOneThirdDiv">
+            <img src="img/randomdoctorimg.jpg" alt="Nolene">
+            <h3>Nolene Carly</h3>
+            <p>Gynecologist</p>
+            <p>Specialize in diseases of the female reproductive system and genital tract.</p>
+        </div>
+
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+</body>
+</html>
+
