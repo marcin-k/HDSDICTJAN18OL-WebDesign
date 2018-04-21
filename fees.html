@@ -8,6 +8,106 @@
     <!--stylesheet file-->
     <link rel="stylesheet" href="myStyle.css">
 
+</head>
+<body>
+    <div class="navBar">
+        <a href="index.html" class="logo"><img src="img/logo.png" style="max-height: 50px; max-width: 120px"></a>
+        <!-- Right-sided navbar links -->
+        <div class="bigScreenNavigation">
+            <a href="index.html" class="navigationItem"><i class="fa fa-home"></i> HOME</a>
+            <a href="services.html" class="navigationItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
+            <a href="fees.html" class="navigationItem"><i class="fa fa-eur"></i> FEES</a>
+            <a href="aboutUs.html" class="navigationItem"><i class="fa fa-user"></i> ABOUT US</a>
+            <a href="contactUs.html" class="navigationItem"><i class="fa fa-envelope"></i> CONTACT US</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="smallScreenMenuIcon" onclick="openMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav style="display:none; color:#fff;background-color:#000" id="mySidebar">
+        <a href="javascript:void(0)" onclick="closeMenu()" class="sideBarItem">Close ×</a>
+        <a href="index.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-home"></i> HOME</a>
+        <a href="services.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
+        <a href="fees.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-eur"></i> FEES</a>
+        <a href="aboutUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-user"></i> ABOUT US</a>
+        <a href="contactUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-envelope"></i> CONTACT US</a>
+    </nav>
+
+
+    <!-- Pricing Section -->
+    <div class="mainContainerHomePage" id="feesStyle">
+        <h3>Fees</h3>
+
+        <table>
+
+            <tr>
+                <th>Type of Service</th>
+                <th>Fee</th>
+            </tr>
+            <tr>
+                <td>Basic Consultation</td>
+                <td>€50</td>
+
+            </tr>
+            <tr>
+                <td>Parent & Child Consultation</td>
+                <td>€60</td>
+
+            </tr>
+            <tr>
+                <td>Blood Test</td>
+                <td>€45</td>
+
+            </tr>
+            <tr>
+                <td>Sick Note</td>
+                <td>Free</td>
+
+            </tr>
+            <tr>
+                <td>Ultrasonic Scan</td>
+                <td>€120</td>
+
+            </tr>
+            <tr>
+                <td>Nebuliser</td>
+                <td>€20</td>
+
+            </tr>
+            <tr>
+                <td>Repeat Prescription</td>
+                <td>Free</td>
+
+            </tr>
+            <tr>
+                <td>MRI</td>
+                <td>€200</td>
+
+            </tr>
+        </table>
+    </div>
+
+    <div id="whiteSpaceDiv">
+        <p>For any additional services please use contact page</p>
+    </div>
+
+    <!--footer continas only the social media links and authors names-->
+    <footer class="footer">
+        <a href="http://www.facebook.com"><i class="fa fa-facebook-official "></i></a>
+        <a href="http://www.instagram.com"><i class="fa fa-instagram "></i></a>
+        <a href="http://www.twitter.com"><i class="fa fa-twitter "></i></a>
+        <a href="http://www.linkedin.com"><i class="fa fa-linkedin "></i></a>
+
+        <p>WebDesign Group H</p>
+        <p>Marcin Krzeminski & Carlos Neia</p>
+    </footer>
+
+    <!--javascript-->
     <script>
         // Toggle between showing and hiding the sidebar when clicking the menu icon
         var mySidebar = document.getElementById("mySidebar");
@@ -25,103 +125,5 @@
             mySidebar.style.display = "none";
         }
     </script>
-</head>
-<body>
-<div class="navBar">
-    <a href="index.html" class="logo"><img src="img/logo.png" style="max-height: 50px; max-width: 120px"></a>
-    <!-- Right-sided navbar links -->
-    <div class="bigScreenNavigation">
-        <a href="index.html" class="navigationItem"><i class="fa fa-home"></i> HOME</a>
-        <a href="services.html" class="navigationItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
-        <a href="fees.html" class="navigationItem"><i class="fa fa-eur"></i> FEES</a>
-        <a href="aboutUs.html" class="navigationItem"><i class="fa fa-user"></i> ABOUT US</a>
-        <a href="contactUs.html" class="navigationItem"><i class="fa fa-envelope"></i> CONTACT US</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="smallScreenMenuIcon" onclick="openMenu()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
-
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav style="display:none; color:#fff;background-color:#000" id="mySidebar">
-    <a href="javascript:void(0)" onclick="closeMenu()" class="sideBarItem">Close ×</a>
-    <a href="index.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-home"></i> HOME</a>
-    <a href="services.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
-    <a href="fees.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-eur"></i> FEES</a>
-    <a href="aboutUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-user"></i> ABOUT US</a>
-    <a href="contactUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-envelope"></i> CONTACT US</a>
-</nav>
-
-
-<!-- Pricing Section -->
-<div class="mainContainerHomePage" id="feesStyle">
-    <h3>Fees</h3>
-
-    <table>
-
-        <tr>
-            <th>Type of Service</th>
-            <th>Fee</th>
-        </tr>
-        <tr>
-            <td>Basic Consultation</td>
-            <td>€50</td>
-
-        </tr>
-        <tr>
-            <td>Parent & Child Consultation</td>
-            <td>€60</td>
-
-        </tr>
-        <tr>
-            <td>Blood Test</td>
-            <td>€45</td>
-
-        </tr>
-        <tr>
-            <td>Sick Note</td>
-            <td>Free</td>
-
-        </tr>
-        <tr>
-            <td>Ultrasonic Scan</td>
-            <td>€120</td>
-
-        </tr>
-        <tr>
-            <td>Nebuliser</td>
-            <td>€20</td>
-
-        </tr>
-        <tr>
-            <td>Repeat Prescription</td>
-            <td>Free</td>
-
-        </tr>
-        <tr>
-            <td>MRI</td>
-            <td>€200</td>
-
-        </tr>
-    </table>
-</div>
-
-<div id="whiteSpaceDiv">
-    <p>For any additional services please use contact page</p>
-</div>
-
-<!--footer continas only the social media links and authors names-->
-<footer class="footer">
-    <a href="http://www.facebook.com" ><i class="fa fa-facebook-official "></i></a>
-    <a href="http://www.instagram.com" ><i class="fa fa-instagram "></i></a>
-    <a href="http://www.twitter.com" ><i class="fa fa-twitter "></i></a>
-    <a href="http://www.linkedin.com" ><i class="fa fa-linkedin "></i></a>
-
-    <p>WebDesign Group H</p>
-    <p>Marcin Krzeminski & Carlos Neia</p>
-</footer>
 </body>
 </html>

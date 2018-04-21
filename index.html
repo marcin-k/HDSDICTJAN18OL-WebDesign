@@ -8,14 +8,95 @@
     <!--stylesheet file-->
     <link rel="stylesheet" href="myStyle.css">
 
+</head>
+
+<body>
+
+    <!--page header-->
+
+    <div class="navBar">
+        <a href="index.html" class="logo"><img src="img/logo.png" style="max-height: 50px; max-width: 120px"></a>
+        <!-- Right-sided navbar links -->
+        <div class="bigScreenNavigation">
+            <a href="index.html" class="navigationItem"><i class="fa fa-home"></i> HOME</a>
+            <a href="services.html" class="navigationItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
+            <a href="fees.html" class="navigationItem"><i class="fa fa-eur"></i> FEES</a>
+            <a href="aboutUs.html" class="navigationItem"><i class="fa fa-user"></i> ABOUT US</a>
+            <a href="contactUs.html" class="navigationItem"><i class="fa fa-envelope"></i> CONTACT US</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="smallScreenMenuIcon" onclick="openMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav style="display:none; color:#fff;background-color:#000" id="mySidebar">
+        <a href="javascript:void(0)" onclick="closeMenu()" class="sideBarItem">Close ×</a>
+        <a href="index.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-home"></i> HOME</a>
+        <a href="services.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
+        <a href="fees.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-eur"></i> FEES</a>
+        <a href="aboutUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-user"></i> ABOUT US</a>
+        <a href="contactUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-envelope"></i> CONTACT US</a>
+    </nav>
+
+    <script src="js/scripts.js"></script>
+
+    <!--image on the home page-->
+    <img src="img/mainPageImg.jpg" id="homePageImage" alt="Medical Icons">
+
+    <!--main section of the page describes what we do-->
+    <!--contains two divs that move around based on display size-->
+    <div class="mainContainerHomePage">
+
+        <div class="responsiveHalfSizeDiv">
+            <h3>What we do</h3>
+            <p>We provide our patients with comprehensive medical care, access to free laboratory tests and on-site
+                ultrasound. We provide competent service and a pleasant atmosphere.</p>
+            <p>All you need to do is to book an appointment using our contact us page.</p>
+            <p>We would love to care for all your medical needs.</p>
+        </div>
+
+
+        <div class="responsiveHalfSizeDiv">
+            <p style="letter-spacing:4px;">Average Patient Satisfaction</p>
+            <div class="progressBars">
+                <div id="satisfactionBar">90%</div>
+                <!--<div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>-->
+            </div>
+            <p style="letter-spacing:4px;">Maximum wait time for an appointment</p>
+            <div class="progressBars">
+                <div id="waitTimeBar">48H</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--footer continas only the social media links and authors names-->
+    <footer class="footer">
+        <a href="http://www.facebook.com"><i class="fa fa-facebook-official "></i></a>
+        <a href="http://www.instagram.com"><i class="fa fa-instagram "></i></a>
+        <a href="http://www.twitter.com"><i class="fa fa-twitter "></i></a>
+        <a href="http://www.linkedin.com"><i class="fa fa-linkedin "></i></a>
+
+        <p>WebDesign Group H</p>
+        <p>Marcin Krzeminski & Carlos Neia</p>
+    </footer>
+
+    <!-- java script-->
     <script>
         // Toggle between showing and hiding the sidebar when clicking the menu icon
         var mySidebar = document.getElementById("mySidebar");
 
         function openMenu() {
+
             if (mySidebar.style.display === 'block') {
+
                 mySidebar.style.display = 'none';
             } else {
+
                 mySidebar.style.display = 'block';
             }
         }
@@ -25,81 +106,6 @@
             mySidebar.style.display = "none";
         }
     </script>
-</head>
-
-<body>
-<!--page header-->
-<div class="navBar">
-    <a href="index.html" class="logo"><img src="img/logo.png" style="max-height: 50px; max-width: 120px"></a>
-    <!-- Right-sided navbar links -->
-    <div class="bigScreenNavigation">
-        <a href="index.html" class="navigationItem"><i class="fa fa-home"></i> HOME</a>
-        <a href="services.html" class="navigationItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
-        <a href="fees.html" class="navigationItem"><i class="fa fa-eur"></i> FEES</a>
-        <a href="aboutUs.html" class="navigationItem"><i class="fa fa-user"></i> ABOUT US</a>
-        <a href="contactUs.html" class="navigationItem"><i class="fa fa-envelope"></i> CONTACT US</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="smallScreenMenuIcon" onclick="openMenu()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
-
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav style="display:none; color:#fff;background-color:#000" id="mySidebar">
-    <a href="javascript:void(0)" onclick="closeMenu()" class="sideBarItem">Close ×</a>
-    <a href="index.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-home"></i> HOME</a>
-    <a href="services.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
-    <a href="fees.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-eur"></i> FEES</a>
-    <a href="aboutUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-user"></i> ABOUT US</a>
-    <a href="contactUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-envelope"></i> CONTACT US</a>
-</nav>
-
-
-
-
-
-<!--image on the home page-->
-<img src="img/mainPageImg.jpg" id="homePageImage"  alt="Medical Icons">
-
-<!--main section of the page describes what we do-->
-<!--contains two divs that move around based on display size-->
-<div  class="mainContainerHomePage" >
-
-        <div class="responsiveHalfSizeDiv">
-            <h3>What we do</h3>
-            <p>We provide our patients with comprehensive medical care, access to free laboratory tests and on-site ultrasound. We provide competent service and a pleasant atmosphere.</p>
-            <p>All you need to do is to book an appointment using our contact us page.</p>
-            <p>We would love to care for all your medical needs.</p>
-        </div>
-
-
-        <div class="responsiveHalfSizeDiv">
-            <p style="letter-spacing:4px;">Average Patient Satisfaction</p>
-            <div class="progressBars" >
-                <div id="satisfactionBar">90%</div>
-                <!--<div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>-->
-            </div>
-            <p style="letter-spacing:4px;">Maximum wait time for an appointment</p>
-            <div class="progressBars" >
-                <div id="waitTimeBar">48H</div>
-            </div>
-        </div>
-
-</div>
-
-<!--footer continas only the social media links and authors names-->
-<footer class="footer">
-    <a href="http://www.facebook.com" ><i class="fa fa-facebook-official "></i></a>
-    <a href="http://www.instagram.com" ><i class="fa fa-instagram "></i></a>
-    <a href="http://www.twitter.com" ><i class="fa fa-twitter "></i></a>
-    <a href="http://www.linkedin.com" ><i class="fa fa-linkedin "></i></a>
-
-    <p>WebDesign Group H</p>
-    <p>Marcin Krzeminski & Carlos Neia</p>
-</footer>
 </body>
 </html>
 

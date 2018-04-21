@@ -8,58 +8,37 @@
     <!--stylesheet file-->
     <link rel="stylesheet" href="myStyle.css">
 
-    <script>
-        // Toggle between showing and hiding the sidebar when clicking the menu icon
-        var mySidebar = document.getElementById("mySidebar");
-
-        function openMenu() {
-            if (mySidebar.style.display === 'block') {
-                mySidebar.style.display = 'none';
-            } else {
-                mySidebar.style.display = 'block';
-            }
-        }
-
-        // Close the sidebar with the close button
-        function closeMenu() {
-            mySidebar.style.display = "none";
-        }
-    </script>
 </head>
 
 <body>
 
-<div class="navBar">
-    <a href="index.html" class="logo"><img src="img/logo.png" style="max-height: 50px; max-width: 120px"></a>
-    <!-- Right-sided navbar links -->
-    <div class="bigScreenNavigation">
-        <a href="index.html" class="navigationItem"><i class="fa fa-home"></i> HOME</a>
-        <a href="services.html" class="navigationItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
-        <a href="fees.html" class="navigationItem"><i class="fa fa-eur"></i> FEES</a>
-        <a href="aboutUs.html" class="navigationItem"><i class="fa fa-user"></i> ABOUT US</a>
-        <a href="contactUs.html" class="navigationItem"><i class="fa fa-envelope"></i> CONTACT US</a>
+    <div class="navBar">
+        <a href="index.html" class="logo"><img src="img/logo.png" style="max-height: 50px; max-width: 120px"></a>
+        <!-- Right-sided navbar links -->
+        <div class="bigScreenNavigation">
+            <a href="index.html" class="navigationItem"><i class="fa fa-home"></i> HOME</a>
+            <a href="services.html" class="navigationItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
+            <a href="fees.html" class="navigationItem"><i class="fa fa-eur"></i> FEES</a>
+            <a href="contactUs.html" class="navigationItem"><i class="fa fa-envelope"></i> CONTACT US</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+        <a href="javascript:void(0)" class="smallScreenMenuIcon" onclick="openMenu()"><i class="fa fa-bars"></i></a>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="smallScreenMenuIcon" onclick="openMenu()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
 
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav style="display:none; color:#fff;background-color:#000" id="mySidebar">
-    <a href="javascript:void(0)" onclick="closeMenu()" class="sideBarItem">Close ×</a>
-    <a href="index.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-home"></i> HOME</a>
-    <a href="services.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
-    <a href="fees.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-eur"></i> FEES</a>
-    <a href="aboutUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-user"></i> ABOUT US</a>
-    <a href="contactUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-envelope"></i> CONTACT US</a>
-</nav>
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav style="display:none; color:#fff;background-color:#000" id="mySidebar">
+        <a href="javascript:void(0)" onclick="closeMenu()" class="sideBarItem">Close ×</a>
+        <a href="index.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-home"></i> HOME</a>
+        <a href="services.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
+        <a href="fees.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-eur"></i> FEES</a>
+        <a href="aboutUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-user"></i> ABOUT US</a>
+        <a href="contactUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-envelope"></i> CONTACT US</a>
+    </nav>
 
 
-<!-- Contact Section -->
-<div class="mainContainerHomePage">
+    <!-- Contact Section -->
+    <div class="mainContainerHomePage">
 
 
         <div class="aboutUsHalf">
@@ -86,22 +65,42 @@
             </form>
         </div>
 
-        <img class="aboutUsHalf" id="map" src="img/mapLocation.jpg"  alt="Our Location">
+        <img class="aboutUsHalf" id="map" src="img/mapLocation.jpg" alt="Our Location">
 
 
-</div>
+    </div>
 
-<!--footer continas only the social media links and authors names-->
-<footer class="footer">
-    <a href="http://www.facebook.com" ><i class="fa fa-facebook-official "></i></a>
-    <a href="http://www.instagram.com" ><i class="fa fa-instagram "></i></a>
-    <a href="http://www.twitter.com" ><i class="fa fa-twitter "></i></a>
-    <a href="http://www.linkedin.com" ><i class="fa fa-linkedin "></i></a>
+    <!--footer continas only the social media links and authors names-->
+    <footer class="footer">
+        <a href="http://www.facebook.com"><i class="fa fa-facebook-official "></i></a>
+        <a href="http://www.instagram.com"><i class="fa fa-instagram "></i></a>
+        <a href="http://www.twitter.com"><i class="fa fa-twitter "></i></a>
+        <a href="http://www.linkedin.com"><i class="fa fa-linkedin "></i></a>
 
-    <p>WebDesign Group H</p>
-    <p>Marcin Krzeminski & Carlos Neia</p>
-</footer>
+        <p>WebDesign Group H</p>
+        <p>Marcin Krzeminski & Carlos Neia</p>
+    </footer>
 
+
+    <!--javascript-->
+
+    <script>
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function openMenu() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function closeMenu() {
+            mySidebar.style.display = "none";
+        }
+    </script>
 </body>
 </html>
 

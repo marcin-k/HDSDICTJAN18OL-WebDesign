@@ -8,6 +8,90 @@
     <!--stylesheet file-->
     <link rel="stylesheet" href="myStyle.css">
 
+</head>
+    <body>
+
+    <div class="navBar">
+        <a href="index.html" class="logo"><img src="img/logo.png" style="max-height: 50px; max-width: 120px"></a>
+        <!-- Right-sided navbar links -->
+        <div class="bigScreenNavigation">
+            <a href="index.html" class="navigationItem"><i class="fa fa-home"></i> HOME</a>
+            <a href="services.html" class="navigationItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
+            <a href="fees.html" class="navigationItem"><i class="fa fa-eur"></i> FEES</a>
+            <a href="aboutUs.html" class="navigationItem"><i class="fa fa-user"></i> ABOUT US</a>
+            <a href="contactUs.html" class="navigationItem"><i class="fa fa-envelope"></i> CONTACT US</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="smallScreenMenuIcon" onclick="openMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav style="display:none; color:#fff;background-color:#000" id="mySidebar">
+        <a href="javascript:void(0)" onclick="closeMenu()" class="sideBarItem">Close ×</a>
+        <a href="index.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-home"></i> HOME</a>
+        <a href="services.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
+        <a href="fees.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-eur"></i> FEES</a>
+        <a href="aboutUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-user"></i> ABOUT US</a>
+        <a href="contactUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-envelope"></i> CONTACT US</a>
+    </nav>
+
+    <!--two dives side by site floating one undeneath the other on smaller devices-->
+    <div class="mainContainerHomePage" id="aboutUsTopSection">
+        <div class="aboutUsHalf">
+            <h3>About Us</h3>
+            <p>We are small group of talented individuals operating in medical
+                services industry. We established our business in April 2018.
+                We provide the highest level of service for reasonable
+                and affordable cost. We are located in Dublin at the campus of National
+                College of Ireland. </p>
+        </div>
+        <!--building image-->
+        <img class="aboutUsHalf" id="aboutUsImage" src="img/collegeBuilding.jpg" alt="College Buildings">
+    </div>
+
+
+    <div id="meetTheTeam">Meet the team</div>
+    <!--Our Team-->
+
+
+    <div class="aboutUsOneThirdDiv">
+        <img src="img/carlos.jpg" alt="Carlos">
+        <h3>Carlos Neia</h3>
+        <p>Dermatologist</p>
+        <p>Specialize in skin diseases, including skin cancers.</p>
+    </div>
+
+    <div class="aboutUsOneThirdDiv">
+        <img src="img/marcin.jpeg" alt="Marcin">
+        <h3>Marcin Krzeminski</h3>
+        <p>Anesthesiologist</p>
+        <p>Specialize in chronic pain syndromes; administers anesthesia and monitors the patient during surgery.</p>
+    </div>
+
+    <div class="aboutUsOneThirdDiv">
+        <img src="img/randomdoctorimg.jpg" alt="Nolene">
+        <h3>Nolene Carly</h3>
+        <p>Gynecologist</p>
+        <p>Specialize in diseases of the female reproductive system and genital tract.</p>
+    </div>
+
+
+    <!--footer continas only the social media links and authors names-->
+    <footer class="footer">
+        <a href="http://www.facebook.com"><i class="fa fa-facebook-official "></i></a>
+        <a href="http://www.instagram.com"><i class="fa fa-instagram "></i></a>
+        <a href="http://www.twitter.com"><i class="fa fa-twitter "></i></a>
+        <a href="http://www.linkedin.com"><i class="fa fa-linkedin "></i></a>
+
+        <p>WebDesign Group H</p>
+        <p>Marcin Krzeminski & Carlos Neia</p>
+    </footer>
+
+    <!--javascript-->
     <script>
         // Toggle between showing and hiding the sidebar when clicking the menu icon
         var mySidebar = document.getElementById("mySidebar");
@@ -25,89 +109,7 @@
             mySidebar.style.display = "none";
         }
     </script>
-</head>
-<body>
 
-<div class="navBar">
-    <a href="index.html" class="logo"><img src="img/logo.png" style="max-height: 50px; max-width: 120px"></a>
-    <!-- Right-sided navbar links -->
-    <div class="bigScreenNavigation">
-        <a href="index.html" class="navigationItem"><i class="fa fa-home"></i> HOME</a>
-        <a href="services.html" class="navigationItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
-        <a href="fees.html" class="navigationItem"><i class="fa fa-eur"></i> FEES</a>
-        <a href="aboutUs.html" class="navigationItem"><i class="fa fa-user"></i> ABOUT US</a>
-        <a href="contactUs.html" class="navigationItem"><i class="fa fa-envelope"></i> CONTACT US</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="smallScreenMenuIcon" onclick="openMenu()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
-
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav style="display:none; color:#fff;background-color:#000" id="mySidebar">
-    <a href="javascript:void(0)" onclick="closeMenu()" class="sideBarItem">Close ×</a>
-    <a href="index.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-home"></i> HOME</a>
-    <a href="services.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-stethoscope"></i> SERVICES</a>
-    <a href="fees.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-eur"></i> FEES</a>
-    <a href="aboutUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-user"></i> ABOUT US</a>
-    <a href="contactUs.html" onclick="w3_close()" class="sideBarItem"><i class="fa fa-envelope"></i> CONTACT US</a>
-</nav>
-
-    <!--two dives side by site floating one undeneath the other on smaller devices-->
-    <div class="mainContainerHomePage" id="aboutUsTopSection">
-        <div class="aboutUsHalf">
-            <h3>About Us</h3>
-            <p>We are small group of talented individuals operating in medical
-                services industry. We established our business in April 2018.
-                We provide the highest level of service for reasonable
-                and affordable cost. We are located in Dublin at the campus of National
-                College of Ireland. </p>
-        </div>
-        <!--building image-->
-        <img  class="aboutUsHalf" id="aboutUsImage" src="img/collegeBuilding.jpg" alt="College Buildings" >
-    </div>
-
-
-    <div id="meetTheTeam" >Meet the team</div>
-    <!--Our Team-->
-
-
-        <div class="aboutUsOneThirdDiv">
-            <img src="img/carlos.jpg" alt="Carlos">
-            <h3>Carlos Neia</h3>
-            <p>Dermatologist</p>
-            <p>Specialize in skin diseases, including skin cancers.</p>
-        </div>
-
-        <div class="aboutUsOneThirdDiv">
-            <img src="img/marcin.jpeg" alt="Marcin">
-            <h3>Marcin Krzeminski</h3>
-            <p>Anesthesiologist</p>
-            <p>Specialize in chronic pain syndromes; administers anesthesia and monitors the patient during surgery.</p>
-        </div>
-
-        <div class="aboutUsOneThirdDiv">
-            <img src="img/randomdoctorimg.jpg" alt="Nolene">
-            <h3>Nolene Carly</h3>
-            <p>Gynecologist</p>
-            <p>Specialize in diseases of the female reproductive system and genital tract.</p>
-        </div>
-
-
-    <!--footer continas only the social media links and authors names-->
-    <footer class="footer">
-        <a href="http://www.facebook.com" ><i class="fa fa-facebook-official "></i></a>
-        <a href="http://www.instagram.com" ><i class="fa fa-instagram "></i></a>
-        <a href="http://www.twitter.com" ><i class="fa fa-twitter "></i></a>
-        <a href="http://www.linkedin.com" ><i class="fa fa-linkedin "></i></a>
-
-        <p>WebDesign Group H</p>
-        <p>Marcin Krzeminski & Carlos Neia</p>
-    </footer>
-
-</body>
+    </body>
 </html>
 
