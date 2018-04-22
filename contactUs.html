@@ -7,7 +7,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--stylesheet file-->
     <link rel="stylesheet" href="myStyle.css">
+    <script>
+        // Input validation from email address
+        // checks if the email filed is not empty
+        // if it is stops the form and displays the alert
+        function validateInput() {
+            //default value is true unless
+            //something is wrong
+            var valid  = new Boolean(true);
 
+            //cheks if the field is empty
+            if (document.getElementById("emailField").value == "") {
+                valid = false;
+                alert("Email is empty");
+            }
+            else{
+                //if email does not contain @ symbol stops
+                if(document.getElementById("emailField").value.indexOf("@")<0){
+                    alert("Email address is incorrect");
+                    valid = false;
+                }
+            }
+            return valid;
+        }
+    </script>
 </head>
 
 <body>
@@ -51,12 +74,12 @@
             <p class="address">D01 Y300</p>
             <p><i class="address"></i> Phone: +353 123456789</p>
             <br>
-            <form action="action_page.php" target="_blank">
+            <form action="action_page.php" target="_blank" onSubmit="return validateInput()">
                 <p><input class="inputField" type="text" placeholder="Name" required name="Name"></p>
-                <p><input class="inputField" type="text" placeholder="Email" required name="Email"></p>
-                <p><input class="inputField" type="text" placeholder="Subject" required name="Subject"></p>
+                <p><input class="inputField" id="emailField" type="text" placeholder="Email" name="Email"></p>
+                <p><input class="inputField" type="text" placeholder="Subject" name="Subject"></p>
                 <p><input class="inputField" type="text" placeholder="Message" required name="Message"></p>
-                <p><input class="inputField" type="date" placeholder="Appointment date" required name="Message"></p>
+                <p><input class="inputField" type="date" placeholder="Appointment date" name="Message"></p>
 
                 <p>
                     <button class="w3-button" type="submit">
@@ -101,6 +124,8 @@
         function closeMenu() {
             mySidebar.style.display = "none";
         }
+
+
     </script>
 </body>
 </html>
